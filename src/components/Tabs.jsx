@@ -1,11 +1,11 @@
 /**
  * return full name of the user
- * @param   {string} firstName  First Name of the User
- * @param   {string} lastName   Last Name of the User
- * @return  {string}            Fullname of the user
+ * @param   {array} props List of links
+ * @return  {Component}   Tabs with Currency
  */
 
 import CurrentDate from "./CurrentDate";
+import Link from "./Link";
 
 export default function Tabs(props) {
 
@@ -14,6 +14,7 @@ export default function Tabs(props) {
   return (
     <div className="tabs">
       <CurrentDate />
+      {links.map(item => <Link title={item} />)}
     </div>
   )
 }
